@@ -1,4 +1,4 @@
-setInterval(() => {
+let update_time = () => {
   const date = new Date();
   const hourTime = date.getHours();
   const minuteTime = date.getMinutes();
@@ -15,4 +15,7 @@ setInterval(() => {
   hour.style.transform = `rotate(${hourRotation}deg)`;
   minute.style.transform = `rotate(${minuteRotation}deg)`;
   second.style.transform = `rotate(${secondRotation}deg)`;
-}, 1000);
+}
+
+update_time()
+setInterval(update_time, 1000);
