@@ -1,21 +1,22 @@
 let update_time = () => {
   const date = new Date();
-  const hourTime = date.getHours();
-  const minuteTime = date.getMinutes();
-  const secondTime = date.getSeconds();
+  const hour_time = date.getHours();
+  const minute_time = date.getMinutes();
+  const second_time = date.getSeconds();
+  const ms_time = date.getMilliseconds();
 
-  const hourRotation = 30 * hourTime + minuteTime / 2;
-  const minuteRotation = 6 * minuteTime;
-  const secondRotation = 6 * secondTime;
+  const hour_rotation = 30 * hour_time + minute_time / 2;
+  const minute_rotation = 6 * (minute_time + second_time / 60);
+  const second_rotation = 6 * (second_time + ms_time / 1000);
 
   const hour = document.getElementById('hour');
   const minute = document.getElementById('minute');
   const second = document.getElementById('second');
 
-  hour.style.transform = `rotate(${hourRotation}deg)`;
-  minute.style.transform = `rotate(${minuteRotation}deg)`;
-  second.style.transform = `rotate(${secondRotation}deg)`;
+  hour.style.transform = `rotate(${hour_rotation}deg)`;
+  minute.style.transform = `rotate(${minute_rotation}deg)`;
+  second.style.transform = `rotate(${second_rotation}deg)`;
 }
 
 update_time()
-setInterval(update_time, 1000);
+setInterval(update_time, 10);
