@@ -1,9 +1,11 @@
+html {
+  overflow: hidden;
+}
+
 #clockContainer {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  /* background: url(clock.png) no-repeat; */
-  /* background-size: 100%; */
 }
 
 #hour,
