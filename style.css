@@ -8,32 +8,40 @@
 
 #hour,
 #minute,
-#second {
+#second,
+#blammo {
   position: absolute;
-  border-radius: 10px;
   transform-origin: bottom;
+  bottom: 50vh;
+  width: var(--width);
+  left: calc(50vw - var(--width) / 2);
+}
+
+#blammo {
+  --size: 40px;
+  width: var(--size);
+  height: var(--size);
+  top: calc(50vh - var(--size) / 2);
+  left: calc(50vw - var(--size) / 2);
+  z-index: 5;
+  border-radius: var(--size);
+  background: #1a1919;
 }
 
 #hour {
-  width: 1.8%;
-  height: 23%;
-  top: 26%;
-  left: 48.85%;
+  --width: 0.9em;
+  height: 14em;
   background: #b58cc6;
 }
 
 #minute {
-  width: 1.3%;
-  height: 32%;
-  top: 17%;
-  left: 49.1%;
+  --width: 0.6em;
+  height: 19em;
   background: #e49641;
 }
 
 #second {
-  width: 1%;
-  height: 40%;
-  top: 9%;
-  left: 49.25%;
+  --width: 0.5em;
+  height: 24em;
   background: #d3ad5c;
 }
