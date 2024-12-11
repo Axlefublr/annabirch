@@ -32,18 +32,18 @@ html {
 
 #hour {
   --width: 0.9em;
-  height: 29vh;
+  height: 30vh;
   background: #b58cc6;
 }
 
 #minute {
   --width: 0.6em;
-  height: 39vh;
+  height: 35vh;
   background: #e49641;
 }
 
 #second {
   --width: 0.5em;
-  height: 49vh;
+  height: 40vh;
   background: #d3ad5c;
 }
