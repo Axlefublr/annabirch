@@ -1,17 +1,18 @@
-html {
-  overflow: hidden;
+:root {
+  --border-color: #d4be98;
+  --marker-color: #d4be98;
+  --blammo-color: #b58cc6;
 }
 
-#clockContainer {
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
+html {
+  overflow: hidden;
 }
 
 #hour,
 #minute,
 #second,
-#blammo {
+#blammo,
+.marker {
   position: absolute;
   transform-origin: bottom;
   bottom: 50vh;
@@ -19,31 +20,101 @@ html {
   left: calc(50vw - var(--width) / 2);
 }
 
+#clock-container {
+  position: absolute;
+  box-sizing: border-box;
+  --bigness: 95vh;
+  height: var(--bigness);
+  width: var(--bigness);
+  border: 0.6em solid var(--border-color);
+  border-radius: var(--bigness);
+  left: calc(50vw - var(--bigness) / 2);
+  bottom: calc(50vh - var(--bigness) / 2);
+}
+
 #blammo {
-  --size: 40px;
+  --size: 3.3em;
   width: var(--size);
   height: var(--size);
   top: calc(50vh - var(--size) / 2);
   left: calc(50vw - var(--size) / 2);
   z-index: 5;
   border-radius: var(--size);
-  background: #1a1919;
+  background: var(--blammo-color);
 }
 
 #hour {
-  --width: 0.9em;
-  height: 30vh;
-  background: #b58cc6;
+  --width: 0.85em;
+  height: 29vh;
+  background: #ea6962;
+  z-index: 1;
 }
 
 #minute {
-  --width: 0.6em;
-  height: 35vh;
+  --width: 0.7em;
+  height: 36vh;
   background: #e49641;
+  z-index: 2;
 }
 
 #second {
-  --width: 0.5em;
-  height: 40vh;
+  --width: 0.55em;
+  height: 43vh;
   background: #d3ad5c;
+  z-index: 3;
+}
+
+.marker {
+  --width: 0.5em;
+  --offset: -42vh;
+  height: 5vh;
+  background: var(--marker-color);
+}
+
+#twelve {
+  transform: rotate(0deg) translateY(var(--offset));
+}
+
+#one {
+  transform: rotate(30deg) translateY(var(--offset));
+}
+
+#two {
+  transform: rotate(60deg) translateY(var(--offset));
+}
+
+#three {
+  transform: rotate(90deg) translateY(var(--offset));
+}
+
+#four {
+  transform: rotate(120deg) translateY(var(--offset));
+}
+
+#five {
+  transform: rotate(150deg) translateY(var(--offset));
+}
+
+#six {
+  transform: rotate(180deg) translateY(var(--offset));
+}
+
+#seven {
+  transform: rotate(210deg) translateY(var(--offset));
+}
+
+#eight {
+  transform: rotate(240deg) translateY(var(--offset));
+}
+
+#nine {
+  transform: rotate(270deg) translateY(var(--offset));
+}
+
+#ten {
+  transform: rotate(300deg) translateY(var(--offset));
+}
+
+#eleven {
+  transform: rotate(330deg) translateY(var(--offset));
 }
