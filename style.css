@@ -1,7 +1,8 @@
 :root {
   --border-color: #d4be98;
   --marker-color: #d4be98;
-  --blammo-color: #b58cc6;
+  --blammo-color: #1a1919;
+  --blammo-border-color: #b58cc6;
 }
 
 html {
@@ -38,21 +39,23 @@ html {
   height: var(--size);
   top: calc(50vh - var(--size) / 2);
   left: calc(50vw - var(--size) / 2);
+  box-sizing: border-box;
   z-index: 5;
+  border: 0.7em solid var(--blammo-border-color);
   border-radius: var(--size);
   background: var(--blammo-color);
 }
 
 #hour {
   --width: 0.85em;
-  height: 29vh;
+  height: 26vh;
   background: #ea6962;
   z-index: 1;
 }
 
 #minute {
   --width: 0.7em;
-  height: 36vh;
+  height: 35vh;
   background: #e49641;
   z-index: 2;
 }
